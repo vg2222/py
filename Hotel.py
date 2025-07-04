@@ -8,8 +8,8 @@ def slow_print(text, color_, attrs_=None, time_=0.05):
     for char in text:
         cprint(char, end="", flush=True, color=color_, attrs=attrs_)
         time.sleep(time_)
-
-print("\n\n")
+        
+    print("\n\n")
 cprint("-- Сценка: Отель --", "yellow", attrs=["bold"])
 
 for _ in range(10):
@@ -31,6 +31,10 @@ def scene_31():
     print("\n")
     slow_print("Успешно", "green", attrs_=["reverse"], time_=0.01)
     print("\n\n")
+
+    w = open("data.txt", "w")
+    w.write("12")
+    w.close()
 
     slow_print("Сотрудник: Ваш номер - 305, вот ваша карточка", "blue")
     print("\n\n")
